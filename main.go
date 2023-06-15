@@ -15,4 +15,6 @@ func main() {
 	}
 	fmt.Println(Challenge.ToFahrenheit(100))
 	Challenge.StrTest()
+	Challenge.TimeTest()
+	Challenge.StructTesting()
 }

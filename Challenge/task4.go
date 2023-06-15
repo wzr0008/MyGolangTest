@@ -1,0 +1,5 @@
+package Challenge
+
+func ConditionTest() {
+
+}
