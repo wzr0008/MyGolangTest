@@ -1,5 +1,1 @@
 package Challenge
-
-func ConditionTest() {
-
-}
