@@ -1,16 +1,21 @@
 package main
 
 import (
-	"StepbyStep/Algorithm"
-	"StepbyStep/Weekday"
 	"fmt"
+	"math/rand"
+	"strconv"
 )
 
 func main() {
-	fmt.Println("Hello world")
-	fmt.Println(Algorithm.Add(3, 4))
-	fmt.Println(Algorithm.Substract(4, 5))
-	fmt.Println(Algorithm.Multiply(3, 4))
-	fmt.Println(Algorithm.PI)
-	fmt.Println(Weekday.Friday)
+	n := 255
+	for n > 0 {
+		temp := n % 16
+		n /= 16
+		fmt.Print(strconv.Itoa(temp) + "  ")
+	}
+	time := 0
+	for time <= 10 {
+		fmt.Println(rand.Intn(8))
+		time++
+	}
 }
