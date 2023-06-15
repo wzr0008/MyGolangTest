@@ -1,8 +1,8 @@
 package main
 
 import (
+	"StepbyStep/Challenge"
 	"fmt"
-	"math/rand"
 	"strconv"
 )
 
@@ -13,9 +13,6 @@ func main() {
 		n /= 16
 		fmt.Print(strconv.Itoa(temp) + "  ")
 	}
-	time := 0
-	for time <= 10 {
-		fmt.Println(rand.Intn(8))
-		time++
-	}
+	fmt.Println(Challenge.ToFahrenheit(100))
+	Challenge.StrTest()
 }
