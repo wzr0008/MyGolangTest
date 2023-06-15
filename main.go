@@ -17,4 +17,5 @@ func main() {
 	Challenge.StrTest()
 	Challenge.TimeTest()
 	Challenge.StructTesting()
+	Challenge.NodeTesting()
 }
