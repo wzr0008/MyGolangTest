@@ -1,8 +1,8 @@
 package Shape
 
-type square struct {
-	length int "the length of a square"
-	width  int "the width of a square"
+type Square struct {
+	length int
+	width  int
 }
 type InnerS struct {
 	In1 int
@@ -14,8 +14,8 @@ type Outers struct {
 	InnerS
 }
 
-func NewSquare(length, width int) *square {
-	s := new(square)
+func NewSquare(length, width int) *Square {
+	s := new(Square)
 	s.length = length
 	s.width = width
 	return s
