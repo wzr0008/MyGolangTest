@@ -1,10 +1,8 @@
 package main
 
 import (
-	"StepbyStep/Challenge"
 	"StepbyStep/Shape"
 	"fmt"
-	"strconv"
 	"time"
 )
 
@@ -18,25 +16,16 @@ func (t *myTime) ShowTime() {
 	fmt.Println(now.Day())
 }
 func main() {
-	n := 255
-	for n > 0 {
-		temp := n % 16
-		n /= 16
-		fmt.Print(strconv.Itoa(temp) + "  ")
+	var sharper Shape.Shaper
+	c := new(Shape.Circle)
+	c.Radius = 3
+	sharper = c
+	switch t := sharper.(type) {
+	case *Shape.Circle:
+		fmt.Println("This is the circle")
+		fmt.Println(t)
+	case *Shape.Rectangle:
+		fmt.Println("This is the rectangle")
+		fmt.Println(t)
 	}
-	squ := Shape.NewSquare(3, 4)
-	fmt.Println(squ)
-	ele := new(Shape.Outers)
-	ele.B = 3
-	ele.C = 4
-	ele.InnerS.In1 = 3
-	ele.InnerS.In2 = 4
-
-	fmt.Println(ele)
-	t := new(myTime)
-	t.ShowTime()
-	e := new(Challenge.Employee)
-	e.SetSalary(100)
-	e.RaiseSalary(30)
-	e.GetSalary()
 }

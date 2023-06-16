@@ -1,9 +1,12 @@
 package Shape
 
+import "strconv"
+
 type Square struct {
 	length int
 	width  int
 }
+
 type InnerS struct {
 	In1 int
 	In2 int
@@ -19,4 +22,7 @@ func NewSquare(length, width int) *Square {
 	s.length = length
 	s.width = width
 	return s
+}
+func (s *Square) String() string {
+	return "The length is " + strconv.Itoa(s.length) + ".\nAnd the width is " + strconv.Itoa(s.width)
 }
