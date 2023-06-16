@@ -23,9 +23,11 @@ func main() {
 	switch t := sharper.(type) {
 	case *Shape.Circle:
 		fmt.Println("This is the circle")
-		fmt.Println(t)
+		t.Area()
 	case *Shape.Rectangle:
 		fmt.Println("This is the rectangle")
-		fmt.Println(t)
+		t.Area()
+	default:
+		fmt.Println("No way to find it")
 	}
 }
