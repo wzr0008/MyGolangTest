@@ -1,8 +1,9 @@
 package main
 
 import (
-	"StepbyStep/Shape"
+	"StepbyStep/SortTest"
 	"fmt"
+	"sort"
 	"time"
 )
 
@@ -16,18 +17,16 @@ func (t *myTime) ShowTime() {
 	fmt.Println(now.Day())
 }
 func main() {
-	var sharper Shape.Shaper
-	c := new(Shape.Circle)
-	c.Radius = 3
-	sharper = c
-	switch t := sharper.(type) {
-	case *Shape.Circle:
-		fmt.Println("This is the circle")
-		t.Area()
-	case *Shape.Rectangle:
-		fmt.Println("This is the rectangle")
-		t.Area()
-	default:
-		fmt.Println("No way to find it")
-	}
+	//var lst0 Shape.List
+	//if !Shape.LongEnough(lst0) {
+	//	fmt.Println("Failed")
+	//}
+	//lst := new(Shape.List)
+	//Shape.CountInfo(lst, 1, 100)
+	//if Shape.LongEnough(lst) {
+	//	fmt.Println("Done")
+	//}
+	m := SortTest.MySort{3, 4, 1, 2, 0}
+	sort.Sort(m)
+	fmt.Println(m)
 }
