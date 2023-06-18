@@ -1,7 +1,7 @@
 package main
 
 import (
-	"StepbyStep/interfaceTest"
+	"StepbyStep/Concurrency"
 	"fmt"
 	"time"
 )
@@ -16,15 +16,5 @@ func (t *myTime) ShowTime() {
 	fmt.Println(now.Day())
 }
 func main() {
-	var s1 interfaceTest.MyStack
-	s1.Push("Brown")
-	s1.Push(3.14)
-	s1.Push(100)
-	for {
-		item, err := s1.Pop()
-		if err != nil {
-			break
-		}
-		fmt.Println(item)
-	}
+	Concurrency.GoroutineTest4()
 }
