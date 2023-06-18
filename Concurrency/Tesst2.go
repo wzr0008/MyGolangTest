@@ -6,19 +6,21 @@ import (
 )
 
 func sendData(ch chan string) {
+	defer close(ch)
 	ch <- "Washington"
 	ch <- "Tripoli"
 	ch <- "London"
 	ch <- "Beijing"
 	ch <- "Tokyo"
+
 }
 func getData(ch chan string) {
-	var input string
+
 	for {
-		input = <-ch
-		fmt.Println(input)
+		if input, ok := <-ch; ok {
+			fmt.Println(input)
+		}
 	}
-	close(ch)
 }
 func GoroutineTest2() {
 	ch := make(chan string)

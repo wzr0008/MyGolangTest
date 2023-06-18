@@ -16,5 +16,5 @@ func (t *myTime) ShowTime() {
 	fmt.Println(now.Day())
 }
 func main() {
-	Concurrency.GoroutineTest4()
+	Concurrency.GoroutineTest5()
 }
